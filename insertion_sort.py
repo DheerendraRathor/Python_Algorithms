@@ -8,15 +8,12 @@ def insertion_sort(lis):
     Implementation of recursive insertion sort.
     :param lis: list to be sorted
     """
-    if lis == list():
-        return list()
-    else:
-        for i in range(len(lis)):
-        	j = i
-        	while j > 0 and lis[j-1] > lis[j]:
-        		lis[j], lis[j-1] = lis[j-1], lis[j]
-        		j -= 1
-       	return lis
+   	for i in range(len(lis)):
+    	j = i
+    	while j > 0 and lis[j-1] > lis[j]:
+    		lis[j], lis[j-1] = lis[j-1], lis[j]
+    		j -= 1
+   	return lis
 
 def main():
     lis1 = [4, 1, 2, 3, 9]
