@@ -4,7 +4,7 @@ Run assertions of all file by calling main method of each file
 
 import binary_search
 import binary_tree
-from sort import insertion_sort, mergesort, quicksort
+from sort import bubble_sort, insertion_sort, mergesort, quicksort
 
 
 def main():
@@ -16,6 +16,7 @@ def main():
     binary_search.main()
     binary_tree.main()
     insertion_sort.main()
+    bubble_sort.main()
 
 
 if __name__ == '__main__':
