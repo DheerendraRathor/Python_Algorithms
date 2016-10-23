@@ -2,18 +2,6 @@
 Recursive insertion sort implementation in Python 3
 https://en.wikipedia.org/wiki/Insertion_sort
 """
-def insert(x, lis):
-    """
-    Insert element at the right position in the list.
-    :param lis:    list
-    :param element: element to be inserted
-    """
-    if lis == list():
-        return [x]
-    elif lis[0] >= x:
-        return [x] + lis
-    else:
-        return [lis[0]] + insert(x,lis[1:])
 
 def insertion_sort(lis):
     """
@@ -23,7 +11,12 @@ def insertion_sort(lis):
     if lis == list():
         return list()
     else:
-        return insert(lis[0], insertion_sort(lis[1:]))
+        for i in range(len(lis)):
+        	j = i
+        	while j > 0 and lis[j-1] > lis[j]:
+        		lis[j], lis[j-1] = lis[j-1], lis[j]
+        		j -= 1
+       	return lis
 
 def main():
     lis1 = [4, 1, 2, 3, 9]
