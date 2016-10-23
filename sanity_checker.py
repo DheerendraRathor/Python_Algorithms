@@ -6,6 +6,7 @@ import mergesort
 import quicksort
 import binary_search
 import binary_tree
+import insertion_sort
 
 
 def main():
@@ -16,6 +17,7 @@ def main():
     quicksort.main()
     binary_search.main()
     binary_tree.main()
+    insertion_sort.main()
 
 
 if __name__ == '__main__':
